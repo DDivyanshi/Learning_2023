@@ -17,7 +17,7 @@ int isVowel(char c) {
             isVowel = 1; // Vowel
             break;
         default:
-            isVowel = 0; // Not Vowel
+            isVowel = 0; 
             break;
     }
     
