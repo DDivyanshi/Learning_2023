@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int isVowel(char c) {
-    int isVowel = 0; // Initialize to 0 (Not Vowel)
+int Vowel(char c) {
+    int Vowel = 0; 
     
     switch (c) {
         case 'a':
@@ -14,10 +14,10 @@ int isVowel(char c) {
         case 'I':
         case 'O':
         case 'U':
-            isVowel = 1; // Vowel
+            Vowel = 1; 
             break;
         default:
-            isVowel = 0; 
+            Vowel = 0; 
             break;
     }
     
@@ -30,7 +30,7 @@ int main() {
     printf("Enter a character: ");
     scanf(" %c", &character);
     
-    int result = isVowel(character);
+    int result = Vowel(character);
     
     if (result == 1) {
         printf("Vowel\n");
