@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int compareBoxes(int A[], int B[], int size) {
+    int matchFound = 1; 
+    for (int i = 0; i < size; i++) {
+        int found = 0; 
+        
+        for (int j = 0; j < size; j++) {
+            if (A[i] == B[j]) {
+                found = 1; 
+                break;
+            }
+        }
+        
+        if (found == 0) {
+            matchFound = 0; 
+            break;
+        }
+    }
+    
+    return matchFound;
+}
+
+int main() {
+    int A1[] = {200, 10, -90};
+    int B1[] = {-90, 200, 10};
+    int size1 = sizeof(A1) / sizeof(A1[0]);
+    
+    int result1 = compareBoxes(A1, B1, size1);
+    printf("Boxes comparison result: %d\n", result1);
+    
+    int A2[] = {200, 9, -90};
+    int B2[] = {-90, 200, 10};
+    int size2 = sizeof(A2) / sizeof(A2[0]);
+    
+    int result2 = compareBoxes(A2, B2, size2);
+    printf("Boxes comparison result: %d\n", result2);
+    
+    return 0;
+}
