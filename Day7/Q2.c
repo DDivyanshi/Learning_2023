@@ -72,7 +72,7 @@ void performFileCopy(const char *sourcePath, const char *destinationPath, char c
         fwrite(buffer, 1, bytesRead, destinationFile);
     }
 
-    // Close the files
+    
     fclose(sourceFile);
     fclose(destinationFile);
 
